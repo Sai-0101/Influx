@@ -2,33 +2,9 @@
 
 Six tools for Instagram, LinkedIn and YouTube creators: **Scripting, ImageGen, VideoClip, Muse (touch-ups), Trends, C-Pilot**.
 
-## Run it
 
-```bash
-cd backend
-cp .env.example .env      # then paste your API keys into .env              
-```
+Link to see the project**(https://github.com/Sai-0101/Influx)** 
 
-Open **(https://github.com/Sai-0101/Influx)** — the backend serves the frontend too, so everything runs from one command.
-
-
-### Free setup (no credits needed)
-
-| Key | Where to get it | Powers | Free limit |
-|---|---|---|---|
-| `GEMINI_API_KEY` | https://aistudio.google.com/apikey | VideoClip, Muse, Trends (and Scripting/C-Pilot if you skip Groq) | Free tier on Flash models |
-| `OPENAI_API_KEY` = a **Groq** key | https://console.groq.com/keys | Scripting, C-Pilot (fast) | ~1,000 requests/day per model |
-| `CLOUDFLARE_ACCOUNT_ID` + `CLOUDFLARE_API_TOKEN` | Cloudflare dashboard → My Profile → API Tokens → "Workers AI" | ImageGen (FLUX.1 schnell) | 10,000 neurons/day |
-| `YOUTUBE_API_KEY` *(optional)* | Google Cloud console → enable "YouTube Data API v3" | Real YouTube trending videos | 10,000 units/day |
-
-Minimum to demo everything except images: just `GEMINI_API_KEY`.
-
-Free-tier caveats: Gemini's free tier does **not** include image generation or live Google Search grounding, which is why images use Cloudflare and Trends uses the model's own knowledge (`GEMINI_SEARCH=false`). Google may use free-tier inputs to improve its products, so don't upload anything private.
-
-### Paid setup
-OpenAI key in `OPENAI_API_KEY` (empty `OPENAI_BASE_URL`), `IMAGE_PROVIDER=gemini`, `GEMINI_SEARCH=true` on a billed Gemini project.
-
-> Never put API keys in the frontend JS. Anyone can read them in the browser. They live only in `backend/.env`, which is git-ignored.
 
 ## How the frontend works
 
@@ -73,3 +49,6 @@ backend/
   src/providers/gemini.js   Gemini wrapper
   src/routes/*.js           one file per feature
 ```
+
+
+**Note:The api are not added so the ai will not work **
