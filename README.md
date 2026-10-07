@@ -3,7 +3,7 @@
 Six tools for Instagram, LinkedIn and YouTube creators: **Scripting, ImageGen, VideoClip, Muse (touch-ups), Trends, C-Pilot**.
 
 
-Link to see the project**(https://github.com/Sai-0101/Influx)** 
+Link to see the project**(https://radience-influx.netlify.app/)** 
 
 
 ## How the frontend works
