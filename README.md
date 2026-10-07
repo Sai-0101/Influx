@@ -6,13 +6,12 @@ Six tools for Instagram, LinkedIn and YouTube creators: **Scripting, ImageGen, V
 
 ```bash
 cd backend
-npm install
 cp .env.example .env      # then paste your API keys into .env
-npm start                 # or: npm run dev  (auto-restarts on save)
+
 ```
 
-Open **http://localhost:3000** — the backend serves the frontend too, so everything runs from one command.
-Check **http://localhost:3000/api/health** to see which keys are loaded.
+Open **https://radience-influx.netlify.app/** — the backend serves the frontend too, so everything runs from one command.
+
 
 ### Free setup (no credits needed)
 
