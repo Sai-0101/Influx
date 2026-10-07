@@ -1,0 +1,23 @@
+{
+  "name": "influx-backend",
+  "version": "1.0.0",
+  "description": "INFLUX backend - routes creator tools to OpenAI and Gemini",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "ffmpeg-static": "^5.2.0",
+    "multer": "^2.0.0",
+    "openai": "^7.27.0"
+  }
+}

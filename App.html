@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>INFLUX — AI studio for creators</title>
+    <meta name="description" content="Scripts, images, short clips, feedback, trends and a growth co-pilot for Instagram, LinkedIn and YouTube creators.">
+    <meta name="theme-color" content="#17112B">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+
+    <!-- Renders the AI's Markdown answers, then sanitizes them -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js" defer></script>
+</head>
+<body>
+    <div class="stage">
+        <div class="device" id="device">
+            <span class="device-camera" aria-hidden="true"></span>
+
+            <div class="screen" id="screen">
+                <!-- Wallpaper: the ring light -->
+                <div class="wallpaper" aria-hidden="true">
+                    <span class="ring ring-outer"></span>
+                    <span class="ring ring-inner"></span>
+                    <span class="glow"></span>
+                </div>
+
+                <!-- Status bar -->
+                <header class="status-bar" id="statusBar">
+                    <span class="status-time" id="statusTime">9:41</span>
+                    <span class="status-date" id="statusDate"></span>
+                    <span class="status-right" aria-hidden="true">
+                        <span class="rec" id="recIndicator" title="AI is working"><i></i>Live</span>
+                        <svg class="i" viewBox="0 0 20 14"><path d="M10 12.5 7.6 10a3.4 3.4 0 0 1 4.8 0zM4.6 7a7.6 7.6 0 0 1 10.8 0L14 8.4a5.6 5.6 0 0 0-8 0zM1.5 4a12 12 0 0 1 17 0l-1.4 1.4a10 10 0 0 0-14.2 0z" fill="currentColor"/></svg>
+                        <span class="battery"><i></i></span>
+                    </span>
+                </header>
+
+                <!-- Home screen -->
+                <main class="home" id="home" aria-label="Home screen">
+                    <section class="widgets" aria-label="Widgets">
+                        <article class="widget widget-hello">
+                            <p class="widget-greeting" id="greeting">Good morning</p>
+                            <p class="widget-big" id="widgetTime">9:41</p>
+                            <p class="widget-sub" id="widgetDate"></p>
+                            <button class="widget-cta" data-open="copilot">Ask C-Pilot what to post today</button>
+                        </article>
+
+                        <article class="widget widget-engines" aria-live="polite">
+                            <h2>AI engines</h2>
+                            <ul id="engineList">
+                                <li><span class="dot"></span>Checking…</li>
+                            </ul>
+                        </article>
+                    </section>
+
+                    <nav class="app-grid" id="appGrid" aria-label="Apps"></nav>
+                </main>
+
+                <!-- Dock -->
+                <nav class="dock" id="dock" aria-label="Dock"></nav>
+
+                <!-- Opened app renders here -->
+                <section class="app-window" id="appWindow" hidden aria-modal="true" role="dialog"></section>
+
+                <!-- Home indicator: closes the open app -->
+                <button class="home-indicator" id="homeIndicator" aria-label="Go to home screen"><span></span></button>
+
+                <!-- Toasts -->
+                <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
